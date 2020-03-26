@@ -4,7 +4,6 @@
 
 using namespace std;
 /*
-//***************func1*****************8
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
@@ -23,7 +22,7 @@ public:
     }
 };
 */
-
+/*
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
@@ -43,8 +42,8 @@ public:
         return {};
     }
 };
+*/
 
-/*
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
@@ -52,7 +51,7 @@ public:
         unordered_map<int, int> m;
         for (int i = 0; i <= nums.size()-1; i++)
         {
-            if (m.find(target-nums[i]) != m.end() && m[target-nums[i]] != i)
+            if (m.find(target-nums[i]) != m.end())
             {
                 return {m[target-nums[i]],i};
             }
@@ -61,7 +60,8 @@ public:
         return {};
     }
 };
-*/
+
+
 
 
 int main()
@@ -69,16 +69,12 @@ int main()
     
     Solution a;
     vector<int> input;
-    /*
     input.push_back(2);
     input.push_back(7);
     input.push_back(11);
     input.push_back(15);
-    */
-    input.push_back(3);
-    input.push_back(3);
 
-    int target = 6;
+    int target = 9;
     vector<int> output = a.twoSum(input, target);
     vector<int>::iterator iter = output.begin();
     for(; iter != output.end(); iter++)

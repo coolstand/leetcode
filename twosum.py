@@ -43,8 +43,8 @@ class Solution(object):
         return []
  
 if __name__ == '__main__':
-    #a = Solution()
-    #print (a.twoSum_1([2,7,11,15], 9))
+    a = Solution()
+    print (a.twoSum_1([2,7,11,15], 9))
     #print (a.twoSum_2([0,4,3,0], 0))
     #print (a.twoSum_3([3,3], 6))
 
