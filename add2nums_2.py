@@ -79,7 +79,7 @@ class Solution(object):
             x = l1.val if l1 is not None else 0
             y = l2.val if l2 is not None else 0
             sum = x + y + carry
-            carry = sum / 10
+            carry = int(sum / 10)
             cur.next = ListNode(sum % 10)
             cur = cur.next
             if l1 != None:
@@ -112,7 +112,6 @@ if __name__ == '__main__':
     l1 = a.convList("243")
     l2 = a.convList("564")
     result = a.addTwoNumbers(l1,l2)
-    print result
     while result:
         print (result.val)
         result = result.next
