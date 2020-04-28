@@ -13,7 +13,6 @@ class Solution(object):
         """
         if not root:
             return []
-        tmp = []
         result = []
 
         queue = collections.deque()
@@ -29,9 +28,20 @@ class Solution(object):
                 if node.right:
                     queue.append(node.right)
 
-            tmp.append(cur)
-        
-        for _ in range(len(tmp)):
-            result.append(tmp.pop())
+            result.insert(0, cur)
         
         return result
+
+if __name__ == '__main__':
+    root = TreeNode(3)
+    left_1 = TreeNode(9)
+    right_1 = TreeNode(20)
+    root.left = left_1
+    root.right = right_1
+    left_2 = TreeNode(15)
+    right_2 = TreeNode(7)
+    right_1.left = left_2
+    right_1.right = right_2
+
+    a = Solution()
+    print (a.levelOrderBottom(root))
